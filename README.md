@@ -1,16 +1,7 @@
----
-license: apache-2.0
-tags:
-- pytorch
-- diffusers
-- unconditional-image-generation
----
-
 # Denoising Diffusion Probabilistic Models (DDPM)
 
 **Paper**: [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
 
-**Authors**: Jonathan Ho, Ajay Jain, Pieter Abbeel
 
 **Abstract**:
 
@@ -24,10 +15,8 @@ tags:
 - [scheduling_ddim](https://github.com/huggingface/diffusers/blob/main/src/diffusers/schedulers/scheduling_ddim.py)
 - [scheduling_pndm](https://github.com/huggingface/diffusers/blob/main/src/diffusers/schedulers/scheduling_pndm.py)
 
-for inference. Note that while the *ddpm* scheduler yields the highest quality, it also takes the longest.
-For a good trade-off between quality and inference speed you might want to consider the *ddim* or *pndm* schedulers instead.
 
-See the following code:
+Python code to use the model:
 
 ```python
 # !pip install diffusers
@@ -45,13 +34,6 @@ image = ddpm().images[0]
 # save image
 image.save("ddpm_generated_image.png")
 ```
-
-For more in-detail information, please have a look at the [official inference example](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/diffusers_intro.ipynb)
-
-## Training
-
-If you want to train your own model, please have a look at the [official training example](https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb) # <- TODO(PVP) add link
-
 ## Samples
 1. ![sample_1](https://huggingface.co/google/ddpm-ema-celebahq-256/resolve/main/images/generated_image_0.png)
 2. ![sample_2](https://huggingface.co/google/ddpm-ema-celebahq-256/resolve/main/images/generated_image_1.png)
